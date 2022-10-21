@@ -59,7 +59,7 @@ export default {
     }),
     copy({
       targets: [
-        { src: 'typings/**/*', dest: 'lib/typings' },
+        { src: 'typings/**/*', dest: 'lib/typings', transform: (contents) => contents.toString().replace('/src/', '/') },
         { src: 'package.json', dest: 'lib' },
       ]
     })
