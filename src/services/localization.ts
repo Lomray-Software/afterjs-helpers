@@ -19,7 +19,7 @@ const customI18n = i18n as ICustomI18n;
 const originalInit: typeof customI18n['init'] = customI18n.init.bind(customI18n);
 const customInit = (options: InitOptions, callback?: Callback) => {
   if (customI18n.isInitialized) {
-    return false;
+    return callback?.(null, customI18n.t);
   }
 
   const { lng, supportedLngs } = options;
