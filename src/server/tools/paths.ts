@@ -2,7 +2,7 @@
 import glob from 'glob';
 import resolveAppPath from './resolve-app-path';
 
-const getPublicPath = (publicDir: string) =>
+const getPublicPath = (publicDir?: string) =>
   // true - 'razzle start' only (for development /public) in other cases we need /build/public
   process.env.WEBPACK_DEV_SERVER === 'true' ? publicDir || '' : resolveAppPath('build/public');
 

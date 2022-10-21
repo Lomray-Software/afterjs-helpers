@@ -43,6 +43,8 @@ const initServerTranslation = (
       .use(lngDetector)
       .init(
         {
+          lng: defaultLng,
+          supportedLngs: allLng,
           preload: allLng,
           ns: Object.keys(nsLng),
           backend: getBackendLocalesPaths(localesSrc),
