@@ -2,12 +2,9 @@
 import glob from 'glob';
 import resolveAppPath from './resolve-app-path';
 
-const publicPath =
+const getPublicPath = (publicDir: string) =>
   // true - 'razzle start' only (for development /public) in other cases we need /build/public
-  process.env.WEBPACK_DEV_SERVER === 'true'
-    ? process.env.RAZZLE_PUBLIC_DIR || ''
-    : resolveAppPath('build/public');
-const assets = require(process.env.RAZZLE_ASSETS_MANIFEST || '');
+  process.env.WEBPACK_DEV_SERVER === 'true' ? publicDir || '' : resolveAppPath('build/public');
 
 // get manifest.json name if exist
 const getManifestPath = (rootDir: string) =>
@@ -19,4 +16,4 @@ const getIosIcons = (rootDir: string) =>
     size: /[\d]+x[\d]+/.exec(iconPath)?.[0] ?? '',
   }));
 
-export { publicPath, assets, getManifestPath, getIosIcons };
+export { getPublicPath, getManifestPath, getIosIcons };
