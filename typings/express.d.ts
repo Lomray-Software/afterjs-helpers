@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import 'express';
 import type Cookies from 'universal-cookie';
+// @ts-ignore
 import type i18n from '../services/localization';
 
 declare module 'express' {
