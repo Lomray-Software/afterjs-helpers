@@ -1,3 +1,4 @@
+// @ts-ignore
 import type { ISetupCache } from 'axios-cache-adapter';
 import type { Request, Response } from 'express';
 
@@ -39,6 +40,7 @@ class AxiosRequestAdapter {
    * Get axios adapter
    */
   public getAdapter() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return this.cache?.adapter;
   }
 
