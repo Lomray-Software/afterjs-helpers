@@ -42,6 +42,7 @@
     "i18next-fs-backend": "1.1.4",
     "i18next-http-backend": "1.4.1",
     "i18next-http-middleware": "3.1.4",
+    "node-schedule": "^2.1.0",
     "react-i18next": "11.14.3",
     "react-top-loading-bar": "^2.3.1"
   },
@@ -60,6 +61,7 @@
     "@types/i18next-fs-backend": "^1.1.2",
     "@types/lodash": "^4.14.182",
     "@types/react": "^18.0.21",
+    "@types/node-schedule": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "eslint": "8.21.0",
@@ -87,6 +89,7 @@
     "@lomray/after": "^4.0.0",
     "@lomray/client-helpers-react": "*",
     "@lomray/react-mobx-manager": ">=1.0.0-beta.9",
+    "axios-cache-adapter": "^2.7.3",
     "mobx": "^6.6.2",
     "react": ">=17.0.2",
     "react-router": ">=6.3.0",
