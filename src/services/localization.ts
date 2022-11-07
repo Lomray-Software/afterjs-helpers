@@ -43,7 +43,7 @@ const customInit = (options: InitOptions, callback?: Callback) => {
     {
       debug: false,
       // fallbackLng: DEFAULT_APP_LANGUAGE, // this load en locale (see network) if current ru, this implemented in detectors
-      keySeparator: false,
+      keySeparator: '.',
       load: 'languageOnly',
       defaultNS: 'translation',
       react: {
