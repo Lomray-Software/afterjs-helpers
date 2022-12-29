@@ -16,7 +16,7 @@ const InitialProps = <TP>(
 ) => {
   const contextId = 'ssr';
 
-  Component['contextId'] = contextId;
+  Component['libStoreContextId'] = contextId;
   Component.getInitialProps = (ctx: Ctx): InitialPropsReturn => {
     // @ts-ignore
     const { storeManager } = ctx;
